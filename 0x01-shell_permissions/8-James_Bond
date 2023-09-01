@@ -1,0 +1,4 @@
+#!/bin/bash
+chmod u=--- hello
+chmod g=--- hello
+chmod o=7 hello
