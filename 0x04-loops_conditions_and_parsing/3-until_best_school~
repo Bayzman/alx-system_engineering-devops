@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# use until loop to print 'Best School' 10 times
-i=1
-until [ $i -e 10 ]
-do
-	echo 'Best School'
-	i=$((i+1))
-done
