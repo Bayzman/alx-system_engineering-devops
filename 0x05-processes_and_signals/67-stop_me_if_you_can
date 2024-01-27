@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Terminates the specified infinite loop
+
+pkill -f 7-highlander
