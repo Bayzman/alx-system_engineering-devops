@@ -1,0 +1,15 @@
+https://drive.google.com/file/d/1-hiLB-NEXJMudJ9Rz457RfpLEEoh9Yhh/view?usp=sharing
+
+- A server provides resources, services or data to other computers known as client over a network
+
+- DNS servers convert domain names to IP addresses
+
+- www.foobar.com is a subdomain, and it is represented in a DNS record as a "CNAME" (Canonical Name) record or an "A" (Address) record.
+
+- Web server is a used to connect to web pages
+
+- Application server hosts applications or software that delivers a business application through a communication protocol
+
+- Database stores data
+
+- Server communicates with the computer of the user requesting the website HTTP using TCP/IP
