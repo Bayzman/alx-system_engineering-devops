@@ -3,7 +3,7 @@
 # on the 4th loop, print 'bad luck' and on
 # the 8th loop, print 'good luck'
 i=1
-while [ $i -le 9 ]
+while [ $i -le 10 ]
 do
     if [ $i -eq 4 ]
     then
