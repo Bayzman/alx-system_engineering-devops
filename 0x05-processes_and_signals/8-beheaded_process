@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# kills the highlander script
-
-pkill -f -SIGKILL 7-highlander
