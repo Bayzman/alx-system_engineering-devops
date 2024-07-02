@@ -7,7 +7,10 @@ apt-get -y install nginx
 service nginx start
 
 ufw allow 'Nginx HTTP'
-touch /var/www/html/index.html
+
 echo "Hello World!" > /var/www/html/index.html
+
+chown -R "$USER":"$USER" /var/www/html
+chmod -R 755 /var/www
 
 service nginx restart
