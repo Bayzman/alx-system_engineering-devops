@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Get Apache to run on a container
 # Fix server bug to display a page
 
 echo "ServerName localhost" >> /etc/apache2/apache2.conf
