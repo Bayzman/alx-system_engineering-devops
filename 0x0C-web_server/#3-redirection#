@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Installs and configure web server to redirect
+
+apt-get update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+
+sh -c 'echo "Hello World!" > /var/www/html/index.html'
+
+sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com permanent;' /etc/nginx/sites-available/default
+
+service nginx restart
