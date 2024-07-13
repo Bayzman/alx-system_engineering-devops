@@ -4,7 +4,10 @@
 apt-get update
 apt install -y haproxy
 
+echo -e "\nSetting up some minor stuff.\n"
+
 # backup default server config file
+sudo chown $USER:USER /etc/haproxy/
 sudo cp /etc/haproxy/haproxy.cfg haproxy_default.backup
 
 # Server config
