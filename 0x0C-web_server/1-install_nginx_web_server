@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
 # Install nginx web server
 
-apt-get -y update
+apt-get update
 apt-get -y install nginx
-
-service nginx start
 
 ufw allow 'Nginx HTTP'
 
-chown -R "$USER":"$USER" /var/www/html
-chmod -R 755 /var/www
-
-service nginx --full-restart
 echo "Hello World!" > /var/www/html/index.html
+
+service nginx restart
