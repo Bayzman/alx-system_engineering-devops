@@ -5,21 +5,19 @@
 """
 
 import requests
+from requests.auth import HTTPBasicAuth
 
 
 def number_of_subscribers(subreddit):
     """ Returns the number of subscribers """
-    url = "https://www.reddit.com/r/{subreddit}/about.json"
-    header = {"User-Agent": "Bayzman"}
-    response = requests.get(url, headers=header, allow_redirects=False)
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    basic = HTTPBasicAuth('user', 'pass')
+    response = requests.get(url, auth=basic, allow_redirects=False)
 
-    if response.status_code != 200:
-        return 0
-
-    else:
+    if response.status_code == 200:
         data = response.json()
         subs = data['data']['subscribers']
         return subs
 
-# subscribers = number_of_subscribers('python')
-# print('The number of subscribers in r/python is: {}'.format(subscribers))
+    else:
+        return 0
