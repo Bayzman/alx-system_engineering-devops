@@ -21,5 +21,5 @@ def number_of_subscribers(subreddit):
         subs = data['data']['subscribers']
         return subs
 
-#subscribers = number_of_subscribers('python')
-#print('The number of subscribers in r/python is: {}'.format(subscribers))
+# subscribers = number_of_subscribers('python')
+# print('The number of subscribers in r/python is: {}'.format(subscribers))
