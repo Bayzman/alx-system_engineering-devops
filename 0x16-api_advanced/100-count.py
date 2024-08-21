@@ -20,7 +20,7 @@ def count_words(subreddit, word_list):
     if after:
         params['after'] = after
 
-    response = requests.get(url, headers=headers, params=params, \
+    response = requests.get(url, headers=headers, params=params,
                             allow_redirects=False)
 
     if response.status_code != 200:
@@ -32,15 +32,14 @@ def count_words(subreddit, word_list):
         title = post['data']['title']
         for word in word_list:
             if word.lower() in title.lower():
-                word_counts[word.lower()] = word_counts.get(word.lower(), 0) + 1
-
+                word_counts[word.lower()] = word_counts.get(word.lower(),
+                                                            0) + 1
     after = response.json()['data']['after']
 
     if after is None:
         if not word_counts:
             pass
-
-        for key, value in sorted(word_counts.items(), \
+        for key, value in sorted(word_counts.items(),
                                  key=lambda x: (-x[1], x[0])):
             print('{}: {}'.format(key.lower(), value))
         pass
