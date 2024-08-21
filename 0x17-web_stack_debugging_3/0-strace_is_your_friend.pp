@@ -1,7 +1,6 @@
-# puppet script that renames a file
+# A puppet code that automate the web stack error
 
-exec { 'rename_file':
-  command => 'sudo cp /var/www/html/wp-includes/class-wp-locale.php /var/www/html/wp-includes/class-wp-locale.phpp',
-  path    => '/bin',
-  onlyif  => 'test -f /var/www/html/wp-includes/class-wp-locale.php',
+exec { 'fix-apache-error':
+        command  => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
+        provider => 'shell'
 }
