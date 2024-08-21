@@ -10,8 +10,8 @@ import requests
 def number_of_subscribers(subreddit):
     """ Returns the number of subscribers """
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    headers = {"User-Agent": "Bayzman"}
-    response = requests.get(url, headers=headers, allow_redirects=False)
+    header = {"User-Agent": "Bayzman"}
+    response = requests.get(url, headers=header, allow_redirects=False)
 
     if response.status_code != 200:
         return 0
@@ -20,3 +20,6 @@ def number_of_subscribers(subreddit):
         data = response.json()
         subs = data['data']['subscribers']
         return subs
+
+#subscribers = number_of_subscribers('python')
+#print('The number of subscribers in r/python is: {}'.format(subscribers))
