@@ -5,7 +5,7 @@ server {
         root /var/www/html;
         index index.html index.htm index.nginx-debian.html
         server_name_;
-        add_header X-Served-By $hostname;
+        add_header X-Served-By 529501-web-01;
         location / {
                 try_files $uri $uri/ =404;
         }
